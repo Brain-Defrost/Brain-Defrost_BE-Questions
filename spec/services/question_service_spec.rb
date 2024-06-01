@@ -30,7 +30,31 @@ RSpec.describe QuestionService do
           .to_return(status: 500)
 
         service_response = QuestionService.create_trivia_questions(topic, question_number)
-        expect(service_response).to eq("Unable to create trivia questions at this time")
+        expect(service_response).to eq('Unable to create trivia questions at this time')
+      end
+  
+      it 'returns error message if response body cannot be parsed' do
+        stub_request(:post, 'https://api.openai.com/v1/chat/completions')
+          .to_return(status: 200, body: 'invalid json', headers: {})
+
+        service_response = QuestionService.create_trivia_questions(topic, question_number)
+        expect(service_response).to eq("Unable to parse trivia questions at this time")
+      end
+
+      it 'returns error message if there is a connection error' do
+        allow(QuestionService).to receive(:post_url)
+          .and_raise(Faraday::ConnectionFailed.new('Connection failed'))
+
+        service_response = QuestionService.create_trivia_questions(topic, question_number)
+        expect(service_response).to eq('Unable to connect to the trivia service at this time')
+      end
+
+      it "handles an empty response gracefully" do
+        stub_request(:post, 'https://api.openai.com/v1/chat/completions')
+          .to_return(status: 200, body: '{}', headers: {})
+
+        service_response = QuestionService.create_trivia_questions(topic, question_number)
+        expect(service_response).to eq("Unable to parse trivia questions at this time")
       end
     end
   end
