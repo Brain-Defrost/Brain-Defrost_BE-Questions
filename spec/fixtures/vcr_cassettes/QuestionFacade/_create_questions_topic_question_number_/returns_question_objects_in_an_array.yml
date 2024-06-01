@@ -4,7 +4,7 @@ http_interactions:
     method: post
     uri: https://api.openai.com/v1/chat/completions
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Write
         3 trivia questions about music. Answer options to the trivia questions should
         be three words max. Format the JSON response according to JSON:API v1.1 standards.
@@ -19,27 +19,19 @@ http_interactions:
       - application/json
       Authorization:
       - "<API_KEY>"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 01 Jun 2024 22:01:19 GMT
+      - Sat, 01 Jun 2024 22:36:19 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
       Openai-Organization:
       - user-cqno5n9tuxhuwnsfmv53dlcm
       Openai-Processing-Ms:
-      - '1986'
+      - '2465'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -57,35 +49,35 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 128ms
       X-Request-Id:
-      - req_f93c8fe5d4d9449701478d285307a5f0
+      - req_b8ebdd5b5e329af9ffc802832af067c4
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=KBVPGi5nvVKuUDdpIML34mJ9tS7uVt.TLyra9u9l7vI-1717279279-1.0.1.1-6MeYYpZW96I5mRgDw4idjohuluCJzhwz84DwmL5ormmSO_V9hb2YxINErJfi69.iWW8LI_60kUAXKICH_H_Fxg;
-        path=/; expires=Sat, 01-Jun-24 22:31:19 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=fKFXjNY2iOJNYWH1hTkRDHIsTNoJYlEOi1ju5oMND_c-1717281379-1.0.1.1-cxkAlc0_TY7wQWFKnwzOW8pTCsepE_wiadlz7iTSEcw3pqp6zglzqfk_ZWeS.YWFxKg_VFTIoWGIFRBo_Bn9lg;
+        path=/; expires=Sat, 01-Jun-24 23:06:19 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=tZaOGt0jYoNgFoeAhSixkRrTWj1iW7t7j9oQxlTm5Cs-1717279279674-0.0.1.1-604800000;
+      - _cfuvid=EUJBx9LjzLef48g25IazAa7KLgPyj8walXeUh27xpwo-1717281379929-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88d27b3bbd167b26-DEN
+      - 88d2ae801e851f3a-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-9VR4nbUpKpe7qOFpWi0ttKQoAjlkw",
+          "id": "chatcmpl-9VRcfJW6Cw1jUKYQBnPYbChT1jR8u",
           "object": "chat.completion",
-          "created": 1717279277,
+          "created": 1717281377,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n    \"data\": [\n        {\n            \"attributes\": {\n                \"question_text\": \"Who is the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Elvis Presley\", \"Madonna\", \"Michael Jackson\", \"Beyonce\"]\n            }\n        },\n        {\n            \"attributes\": {\n                \"question_text\": \"Which band was formed by John Lennon and Paul McCartney?\",\n                \"correct_answer\": \"The Beatles\",\n                \"answer_options\": [\"The Rolling Stones\", \"Led Zeppelin\", \"The Beatles\", \"Queen\"]\n            }\n        },\n        {\n            \"attributes\": {\n                \"question_text\": \"What is the highest selling album of all time?\",\n                \"correct_answer\": \"Thriller\",\n                \"answer_options\": [\"Back in Black\", \"Dark Side of the Moon\", \"Thriller\", \"Rumours\"]\n            }\n        }\n    ]\n}"
+                "content": "{\n    \"data\": [\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"1\",\n            \"attributes\": {\n                \"question_text\": \"Who is the lead singer of The Beatles?\",\n                \"correct_answer\": \"John\",\n                \"answer_options\": [\"Paul\", \"Ringo\", \"John\", \"George\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"2\",\n            \"attributes\": {\n                \"question_text\": \"Which instrument does Taylor Swift play?\",\n                \"correct_answer\": \"Guitar\",\n                \"answer_options\": [\"Piano\", \"Drums\", \"Guitar\", \"Violin\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"3\",\n            \"attributes\": {\n                \"question_text\": \"What is the highest male singing voice?\",\n                \"correct_answer\": \"Tenor\",\n                \"answer_options\": [\"Alto\", \"Baritone\", \"Tenor\", \"Bass\"]\n            }\n        }\n    ]\n}"
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -93,10 +85,10 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 99,
-            "completion_tokens": 187,
-            "total_tokens": 286
+            "completion_tokens": 218,
+            "total_tokens": 317
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 01 Jun 2024 22:01:19 GMT
+  recorded_at: Sat, 01 Jun 2024 22:36:19 GMT
 recorded_with: VCR 6.2.0

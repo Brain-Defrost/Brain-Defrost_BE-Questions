@@ -4,7 +4,7 @@ http_interactions:
     method: post
     uri: https://api.openai.com/v1/chat/completions
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Write
         3 trivia questions about music. Answer options to the trivia questions should
         be three words max. Format the JSON response according to JSON:API v1.1 standards.
@@ -19,27 +19,19 @@ http_interactions:
       - application/json
       Authorization:
       - "<API_KEY>"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 01 Jun 2024 21:12:55 GMT
+      - Sat, 01 Jun 2024 22:36:23 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
       Openai-Organization:
       - user-cqno5n9tuxhuwnsfmv53dlcm
       Openai-Processing-Ms:
-      - '3864'
+      - '3153'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -49,43 +41,43 @@ http_interactions:
       X-Ratelimit-Limit-Tokens:
       - '60000'
       X-Ratelimit-Remaining-Requests:
-      - '9999'
+      - '9998'
       X-Ratelimit-Remaining-Tokens:
       - '59872'
       X-Ratelimit-Reset-Requests:
-      - 8.64s
+      - 14.397s
       X-Ratelimit-Reset-Tokens:
       - 128ms
       X-Request-Id:
-      - req_b9197b73b5c5b8767cbb30e74e2e2d56
+      - req_6ff15c2d8419da366a26484b58601aa0
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=ns64hRK_OoO.fVKr0i2prcX9z.9EPQAPiyMRnh2AsVU-1717276375-1.0.1.1-EYfwqG5QN7yo2SRf6Vd3WjjBaraTTjrvg0HiKuZm5xivCTvdvudrtoSG.ruYuFsG.LKdgyNEcUO05p0ukJ.VgQ;
-        path=/; expires=Sat, 01-Jun-24 21:42:55 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=p07lTAii2T96cUGD7_ddtz7jcPJ1knfynXsYD69KM3M-1717281383-1.0.1.1-_p92AeGT6WWscmU.rOemTWvDYweBC2xbUxg12nrw9FST9CNoYbtpQ0fm9.Ex9Dr6T1GpkhTkcicd4M9c6sRN2w;
+        path=/; expires=Sat, 01-Jun-24 23:06:23 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=NlT8Idbfnk2UmW0dOepVkHmQb3nu_LjcBFMO3fWflxc-1717276375922-0.0.1.1-604800000;
+      - _cfuvid=U_.OxW9EXVEsp_CVYsTDTTdxXGwJ6J2Wj3AWfGYmTj8-1717281383413-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88d2344c5a707c1f-DEN
+      - 88d2ae921b9451e3-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-9VQJwLWinZIQQbTYofmPVPfoeBSjM",
+          "id": "chatcmpl-9VRcihjbeleXMV8akupCto98WEdlr",
           "object": "chat.completion",
-          "created": 1717276372,
+          "created": 1717281380,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n  \"data\": [\n    {\n      \"type\": \"trivia_question\",\n      \"id\": \"1\",\n      \"attributes\": {\n        \"question_text\": \"Which instrument is known as the 'king of instruments'?\",\n        \"correct_answer\": \"Organ\",\n        \"answer_options\": [\"Piano\", \"Guitar\", \"Organ\", \"Drums\"]\n      }\n    },\n    {\n      \"type\": \"trivia_question\",\n      \"id\": \"2\",\n      \"attributes\": {\n        \"question_text\": \"Who was the 'King of Pop'?\",\n        \"correct_answer\": \"Michael Jackson\",\n        \"answer_options\": [\"Prince\", \"Madonna\", \"Michael Jackson\", \"Elvis Presley\"]\n      }\n    },\n    {\n      \"type\": \"trivia_question\",\n      \"id\": \"3\",\n      \"attributes\": {\n        \"question_text\": \"Which band sang 'Stairway to Heaven'?\",\n        \"correct_answer\": \"Led Zeppelin\",\n        \"answer_options\": [\"Pink Floyd\", \"The Beatles\", \"Led Zeppelin\", \"Queen\"]\n      }\n    }\n  ]\n}"
+                "content": "{\n    \"data\": [\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"1\",\n            \"attributes\": {\n                \"question_text\": \"Who is known as the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Elvis Presley\", \"Justin Bieber\", \"Madonna\", \"Michael Jackson\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"2\",\n            \"attributes\": {\n                \"question_text\": \"Which band released the album 'The Dark Side of the Moon'?\",\n                \"correct_answer\": \"Pink Floyd\",\n                \"answer_options\": [\"The Beatles\", \"Led Zeppelin\", \"Queen\", \"Pink Floyd\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"3\",\n            \"attributes\": {\n                \"question_text\": \"What is the biggest selling single of all time?\",\n                \"correct_answer\": \"White Christmas\",\n                \"answer_options\": [\"Thriller\", \"Bohemian Rhapsody\", \"White Christmas\", \"Billie Jean\"]\n            }\n        }\n    ]\n}"
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -93,10 +85,10 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 99,
-            "completion_tokens": 230,
-            "total_tokens": 329
+            "completion_tokens": 238,
+            "total_tokens": 337
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 01 Jun 2024 21:12:55 GMT
+  recorded_at: Sat, 01 Jun 2024 22:36:23 GMT
 recorded_with: VCR 6.2.0
