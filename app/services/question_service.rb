@@ -1,3 +1,5 @@
+require 'async/http/faraday'
+
 class QuestionService 
   def self.create_trivia_questions(topic, question_number)
     query = "Write #{question_number} trivia questions about #{topic}. Answer options to the trivia questions should be three words max. Format the JSON response according to JSON:API v1.1 standards. Keys in the 'attributes' section of the response for each question should include: 'question_text', 'correct_answer', and 'answer_options' (an array of consisting of 4 answer options, including one that's the correct answer. Questions and answers should be written in english."
@@ -12,7 +14,8 @@ class QuestionService
     rescue Faraday::ConnectionFailed => e
       Rails.logger.error "Connection failed: #{e.message}"
       return "Unable to connect to the trivia service at this time"
-    rescue JSON::ParserError && NoMethodError
+    rescue JSON::ParserError, NoMethodError => e
+      Rails.logger.error "Error parsing JSON or NoMethodError: #{e.message}"
       return "Unable to parse trivia questions at this time"
     end
   end
@@ -36,7 +39,7 @@ class QuestionService
     Faraday.new(url:'https://api.openai.com') do |faraday|
       faraday.request :json
       faraday.response :json, content_type: /\bjson$/
-      faraday.adapter Faraday.default_adapter
+      faraday.adapter :async_http
     end
   end
 end
