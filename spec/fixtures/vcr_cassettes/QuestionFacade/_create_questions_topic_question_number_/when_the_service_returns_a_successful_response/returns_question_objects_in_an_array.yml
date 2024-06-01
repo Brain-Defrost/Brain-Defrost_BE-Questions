@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 May 2024 19:46:05 GMT
+      - Sat, 01 Jun 2024 22:01:19 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Openai-Organization:
       - user-cqno5n9tuxhuwnsfmv53dlcm
       Openai-Processing-Ms:
-      - '2908'
+      - '1986'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -57,35 +57,35 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 128ms
       X-Request-Id:
-      - req_26871b6a9b42d077a3b504149c3d298b
+      - req_f93c8fe5d4d9449701478d285307a5f0
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=t96xqhY6g8wLPkfns0wqaoz0B7eowiBOBcq37mQDHZk-1716061565-1.0.1.1-4.ZhoYkfSNd0MZRjP9OlZCb.At91rN1oI9kH4koHfnzbJLAEFeZ._RimDcq9Xel0SMomjqmDVby0hPeBrO4BbA;
-        path=/; expires=Sat, 18-May-24 20:16:05 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=KBVPGi5nvVKuUDdpIML34mJ9tS7uVt.TLyra9u9l7vI-1717279279-1.0.1.1-6MeYYpZW96I5mRgDw4idjohuluCJzhwz84DwmL5ormmSO_V9hb2YxINErJfi69.iWW8LI_60kUAXKICH_H_Fxg;
+        path=/; expires=Sat, 01-Jun-24 22:31:19 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=sGnoDAxQmXDW9oHWv3iMXAuKsb0R_dTL14I_ljZnJAc-1716061565297-0.0.1.1-604800000;
+      - _cfuvid=tZaOGt0jYoNgFoeAhSixkRrTWj1iW7t7j9oQxlTm5Cs-1717279279674-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 885e59dbe9df3347-MIA
+      - 88d27b3bbd167b26-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-9QKIEpj9xtIhUzoqZpdlMLHvg0FHf",
+          "id": "chatcmpl-9VR4nbUpKpe7qOFpWi0ttKQoAjlkw",
           "object": "chat.completion",
-          "created": 1716061562,
+          "created": 1717279277,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n    \"data\": [\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"1\",\n            \"attributes\": {\n                \"question_text\": \"Who is known as the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Elvis Presley\", \"Madonna\", \"Michael Jackson\", \"Beyonce\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"2\",\n            \"attributes\": {\n                \"question_text\": \"What instrument does a saxophonist play?\",\n                \"correct_answer\": \"Saxophone\",\n                \"answer_options\": [\"Violin\", \"Trumpet\", \"Saxophone\", \"Drums\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"3\",\n            \"attributes\": {\n                \"question_text\": \"Which band is known for the hit song 'Stairway to Heaven'?\",\n                \"correct_answer\": \"Led Zeppelin\",\n                \"answer_options\": [\"The Beatles\", \"Rolling Stones\", \"Led Zeppelin\", \"Queen\"]\n            }\n        }\n    ]\n}"
+                "content": "{\n    \"data\": [\n        {\n            \"attributes\": {\n                \"question_text\": \"Who is the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Elvis Presley\", \"Madonna\", \"Michael Jackson\", \"Beyonce\"]\n            }\n        },\n        {\n            \"attributes\": {\n                \"question_text\": \"Which band was formed by John Lennon and Paul McCartney?\",\n                \"correct_answer\": \"The Beatles\",\n                \"answer_options\": [\"The Rolling Stones\", \"Led Zeppelin\", \"The Beatles\", \"Queen\"]\n            }\n        },\n        {\n            \"attributes\": {\n                \"question_text\": \"What is the highest selling album of all time?\",\n                \"correct_answer\": \"Thriller\",\n                \"answer_options\": [\"Back in Black\", \"Dark Side of the Moon\", \"Thriller\", \"Rumours\"]\n            }\n        }\n    ]\n}"
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -93,10 +93,10 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 99,
-            "completion_tokens": 239,
-            "total_tokens": 338
+            "completion_tokens": 187,
+            "total_tokens": 286
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 18 May 2024 19:46:05 GMT
+  recorded_at: Sat, 01 Jun 2024 22:01:19 GMT
 recorded_with: VCR 6.2.0

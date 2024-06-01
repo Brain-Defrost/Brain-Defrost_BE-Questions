@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 May 2024 19:03:50 GMT
+      - Sat, 01 Jun 2024 21:12:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Openai-Organization:
       - user-cqno5n9tuxhuwnsfmv53dlcm
       Openai-Processing-Ms:
-      - '3411'
+      - '3864'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -57,35 +57,35 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 128ms
       X-Request-Id:
-      - req_f9c78124b8c9401687e7dfaa487082d5
+      - req_b9197b73b5c5b8767cbb30e74e2e2d56
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=zAvK9uGldFavDP_Zo7uDcdQUK6lNWVqEdezFm4CWNLc-1716059030-1.0.1.1-jupOXUr2JHtjG8oAf2t6R_MotVtwPXCQlq.QyaxTR73aDKR4Nu5ie5ftyI.WdzuwWVMyBk1UaWqecoATz041Iw;
-        path=/; expires=Sat, 18-May-24 19:33:50 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=ns64hRK_OoO.fVKr0i2prcX9z.9EPQAPiyMRnh2AsVU-1717276375-1.0.1.1-EYfwqG5QN7yo2SRf6Vd3WjjBaraTTjrvg0HiKuZm5xivCTvdvudrtoSG.ruYuFsG.LKdgyNEcUO05p0ukJ.VgQ;
+        path=/; expires=Sat, 01-Jun-24 21:42:55 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=JDT.UoexYNLQPV3roxOistDHGN0AE2Zn0bVdhxomi4E-1716059030039-0.0.1.1-604800000;
+      - _cfuvid=NlT8Idbfnk2UmW0dOepVkHmQb3nu_LjcBFMO3fWflxc-1717276375922-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 885e1bf3db5fda7f-MIA
+      - 88d2344c5a707c1f-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-9QJdK1AFi6mWgCjCd3S3fZ9aGeXwT",
+          "id": "chatcmpl-9VQJwLWinZIQQbTYofmPVPfoeBSjM",
           "object": "chat.completion",
-          "created": 1716059026,
+          "created": 1717276372,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"type\": \"trivia_question\",\n            \"attributes\": {\n                \"question_text\": \"Who is known as the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Elvis Presley\", \"Prince\", \"Michael Jackson\", \"Madonna\"]\n            }\n        },\n        {\n            \"id\": \"2\",\n            \"type\": \"trivia_question\",\n            \"attributes\": {\n                \"question_text\": \"Which band wrote the song 'Bohemian Rhapsody'?\",\n                \"correct_answer\": \"Queen\",\n                \"answer_options\": [\"The Beatles\", \"Queen\", \"Led Zeppelin\", \"The Rolling Stones\"]\n            }\n        },\n        {\n            \"id\": \"3\",\n            \"type\": \"trivia_question\",\n            \"attributes\": {\n                \"question_text\": \"What is the highest-selling album of all time?\",\n                \"correct_answer\": \"Thriller\",\n                \"answer_options\": [\"Dark Side of the Moon\", \"Back in Black\", \"Thriller\", \"The Wall\"]\n            }\n        }\n    ]\n}"
+                "content": "{\n  \"data\": [\n    {\n      \"type\": \"trivia_question\",\n      \"id\": \"1\",\n      \"attributes\": {\n        \"question_text\": \"Which instrument is known as the 'king of instruments'?\",\n        \"correct_answer\": \"Organ\",\n        \"answer_options\": [\"Piano\", \"Guitar\", \"Organ\", \"Drums\"]\n      }\n    },\n    {\n      \"type\": \"trivia_question\",\n      \"id\": \"2\",\n      \"attributes\": {\n        \"question_text\": \"Who was the 'King of Pop'?\",\n        \"correct_answer\": \"Michael Jackson\",\n        \"answer_options\": [\"Prince\", \"Madonna\", \"Michael Jackson\", \"Elvis Presley\"]\n      }\n    },\n    {\n      \"type\": \"trivia_question\",\n      \"id\": \"3\",\n      \"attributes\": {\n        \"question_text\": \"Which band sang 'Stairway to Heaven'?\",\n        \"correct_answer\": \"Led Zeppelin\",\n        \"answer_options\": [\"Pink Floyd\", \"The Beatles\", \"Led Zeppelin\", \"Queen\"]\n      }\n    }\n  ]\n}"
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -93,10 +93,10 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 99,
-            "completion_tokens": 236,
-            "total_tokens": 335
+            "completion_tokens": 230,
+            "total_tokens": 329
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 18 May 2024 19:03:49 GMT
+  recorded_at: Sat, 01 Jun 2024 21:12:55 GMT
 recorded_with: VCR 6.2.0
