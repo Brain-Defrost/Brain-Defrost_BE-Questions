@@ -38,6 +38,8 @@ gem "rack-cors"
 # API Gems
 gem "openai"
 gem "faraday"
+gem "async-io"
+gem "async-http-faraday"
 gem "jsonapi-serializer"
 gem 'rswag-api'
 gem 'rswag-ui'
